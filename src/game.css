@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Texturina:wght@100&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.stats {
+  display: flex;
+}
+.game {
+  background-color: rgb(75, 62, 62);
+  color: white;
+  font-family: "Roboto", sans-serif;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.brd {
+  background-color: rgb(75, 62, 62);
+  padding-top: 20px;
+
+}
+
+
+.board {
+  border: 1rem solid #ff652f;
+  background: #ff652f;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  justify-content: center;
+  text-align: center;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 1rem;
+}
+
+
+
+.squares {
+  background: #272727;
+  border: none;
+  font-size: 3rem;
+  /* font-weight: 800; */
+  cursor: pointer;
+  outline: none;
+}
+#winner {
+  color:darkorange;
+  
+}
+
+#history{
+  color: rgb(245, 50, 50);
+}
+
+#gametitle {
+  color: chartreuse;
+  font-family: 'Texturina', serif;
+  text-align: center;
+  background-color:darkslategray;
+  margin-bottom: 0;
+}
+
+.X {
+  color: red;
+}
+.O {
+  color: green;
+}
+
+.info-wrapper {
+  justify-content: space-between;
+}
+
+h3 {
+  padding: 1rem;
+}
+
+li {
+  list-style: none;
+}
+
+.info-wrapper button {
+  background: #272727;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  max-width: 55px;
+}
+
+
+
+/* Top Bar */
+/* 
+#gamelink{
+
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a{
+  display: block;
+  color:floralwhite;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+
+#triallink{
+
+}
+
+#aboutlink{
+
+} */
+
+.li1{
+  margin-right: 20px;
+}
+.li2{
+  margin-right: 20px;
+}
+
+.li3{
+  margin-right: 20px;
+}
+
+.container-fluid {
+  padding: 0 !important;
+}
+
+
+/* About page */
+
+.aboutsec {
+  margin-top: 10px;
+  background-color: darkgray;
+  font-family: 'Yusei Magic', sans-serif;
+  background-color: darkkhaki;
+  color:darkred;
+  text-align: center;
+}
+
+#name {
+  margin-top: 40px;
+
+}
+
+.about {
+  background-color: lightgrey;
+  
+  /* min-height: 90vh;
+  padding: 2rem; */
+}
+
+.game h1 {
+  margin: 2rem;
+}
+#dev{
+ text-align: center;
+ border: 3px solid green;
+ padding: 10px;
+ font-family: 'Potta One', cursive;
+ color:darkslategray;
+}
+
+.card-img-top {
+  height: 15vw;
+  object-fit: cover;
+}
+.card {
+  width: 18rem;
+}
+.firstrow{
+  width: 100%;
+  display: inline;
+  margin-left: 0 !important;
+}
+.secondrow {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.card {
+  align-content: center;
+  margin: 0 auto; 
+  float: none; 
+  margin-bottom: 10px;
+}
+
+.card-body {
+  background-color: cornflowerblue;
+}
+
+.card-title {
+  border-radius: 5px;
+  background-color: darkcyan;
+}
+
+.card-text {
+  background-color: lightseagreen;
+  border-radius: 5px;
+}
+
+.ab {
+  background-color: #ff652f;
+  height: 90vh;
+}
+
+
+/* trial page */
+
+.form-control {
+  width: 30px;
+}
+
+.trialtext {
+  background-color: lightgrey;
+  text-align: center;
+  min-height: 93vh;
+  padding: 2rem;
+}
+
+#txtbtn {
+  
+  margin-left: 30px;
+  border-radius: 7px;
+  font-family: "Roboto", sans-serif;
+  
+}
+
+#entertext {
+  color: darkslategrey;
+  font-size:medium;
+  
+}
+
+#NameInput {
+  border: 1px solid red;
+  border-radius: 4px;
+  height:30px;
+
+}
+
+#Name{
+  margin-top: 20px;
+
+  color: darkgreen;
+  font-family: 'Yusei Magic', sans-serif;
+
+}
+
+/* Form Page */
+
+
+
+.inputField{
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+ }
+  
+ .inputField:focus{
+  outline: red;
+ }
+  
+ .totalbody{
+  padding-top: 3%;
+  padding-bottom: 10%;
+  padding-right: 20%;
+  padding-left: 20%;
+ background-color: rgb(219, 219, 219);
+ }
+
+ .bodycontainer h4{
+  padding-bottom: 6px;
+ }
+  
+ .bodycontainer{
+  background-color: white;
+  padding-top: 5%;
+  padding-bottom: 5%;
+ }
+  
+ .bodycontainer a{
+  color: rgb(160, 108, 160);
+ }
+
+ input{
+   width: 100%;
+ }
+  
+ .bodycontainer p{
+  padding-bottom: 6px;
+ }
+
+ #adderr{
+   color: red;
+ }
+ 
+  
+ .divbutt{
+  text-align: right;
+  margin-right: 25px;
+  margin-top: 20px;
+ }
+  
+ .btndiv{
+  background-color: rgb(0, 60, 128);
+  width: 20%;
+ }
+  
+ .btndiv:hover{
+  background-color: rgb(49, 0, 128);
+ }
+
+
