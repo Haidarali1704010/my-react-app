@@ -5,6 +5,9 @@ import Game from "./components/Game";
 import AboutUs from "./components/About";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import FormDetails from "./components/Form";
+import Boots from "./components/BootComp";
+import BootsNew from "./components/BootCompNew"
+
 const App = () => {
     return (
         <Router>
@@ -23,30 +26,24 @@ const App = () => {
                 <li className="nav-item li4">
                 <Link to="/Form">Form</Link>
                 </li>
+                <li className="nav-item li5">
+                <Link to="/BootComp">Bootstrap</Link>
+                </li>
+                <li className="nav-item li6">
+                <Link to="/BootCompNew">BootstrapNew</Link>
+                </li>
+                
             </ul>
             </nav>
             </div>
             
-            {/* <div className= "container-fluid">
-                <nav className="navbar">
-                    <ul>
-                        <li id="gamelink">
-                            <Link to="/Game">Game</Link>
-                        </li>
-                        <li id="triallink">
-                            <Link to="/Trial">Trial</Link>
-                        </li>
-                        <li id="aboutlink">
-                            <Link to="/About">About</Link>
-                        </li>
-                    </ul>
-                </nav>
-            </div> */}
             <Switch>
                 <Route path="/Game" component={Game}/>
                 <Route path="/Trial" component={Trial}/>
                 <Route path="/About" component={AboutUs}/>
                 <Route path="/Form" component={FormDetails}/>
+                <Route path="/BootComp" component={Boots}/>
+                <Route path="/BootCompNew" component={BootsNew}/>
             </Switch>
             
         </Router>

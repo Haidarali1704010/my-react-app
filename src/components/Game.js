@@ -40,20 +40,11 @@ const Game = () => {
       const destination = move ? `Go to move #${move}` : "Go to Start";
       return (
         <li key={move}>
-          <button onClick={() => jumpTo(move)}>{destination}</button>
+          <button className="jmpbtn" onClick={() => jumpTo(move)}>{destination}</button>
         </li>
       );
     });
 
-    // const alert = () => {
-    //   if(winner==="tie"){
-    //     return (
-    //       <div class="alert alert-warning" role="alert">
-    //         A simple warning alert—check it out!
-    //       </div>
-    //     );
-    //   }
-    // };
 
   return (
     <div>
@@ -69,8 +60,6 @@ const Game = () => {
           <h3 id="history" >History</h3>
           {renderMoves()}
         </div>
-        {/* <h3 id="winner">{winner ? "Winner: " + winner : "Next Player: " + xO}</h3> */}
-        
       </div>
     </div>
     </div>

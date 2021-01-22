@@ -178,45 +178,9 @@ const FormDetails = () => {
                         <div id="alerttxt" className="alert alert-success mt-3" role="alert">
                             {submitAlert}
                         </div>
-                        
-
                         </div>
                     </Form>
-                    {/* <Form>
                     
-                        <Form.Group controlId="formGridAddress1">
-                        <Form.Label>Street Address: </Form.Label>
-                        <Form.Control className="inputField" placeholder="1234 Main St" />
-                        </Form.Group>
-                        
-                        <Form.Group controlId="formGridApt">
-                            <Form.Label>Apt, Suite: </Form.Label>
-                            <Form.Control className="inputField" placeholder="Suite 900" />
-                        </Form.Group>
-                        
-                        <Form.Group controlId="formGridCity">
-                            <Form.Label>City</Form.Label>
-                            <Form.Control className="inputField" placeholder="San Francisco" />
-                        </Form.Group>
-                        
-                        <Form.Row>
-                        <Form.Group as={Col} controlId="formGridState">
-                            <Form.Label>State: </Form.Label>
-                            <Form.Control className="inputField" placeholder="CA" />
-                        </Form.Group>
-                        
-                        <Form.Group as={Col} controlId="formGridZip">
-                        <Form.Label>Zip Code: </Form.Label>
-                        <Form.Control className="inputField" placeholder="956071" />
-                        </Form.Group>
-                        </Form.Row>
-                        
-                        <div className="divbutt">
-                            <Button className="btndiv" variant="primary" type="submit">
-                            Next
-                            </Button>
-                        </div>
-                    </Form> */}
                 </Container>
             </div>
                 

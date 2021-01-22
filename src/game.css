@@ -1,14 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Potta+One&family=Yusei+Magic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Texturina:wght@100&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&family=Yusei+Magic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Texturina:wght@100&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
+/* Top Bar */
+
+.li1 {
+  margin-right: 20px;
+}
+.li2 {
+  margin-right: 20px;
+}
+
+.li3 {
+  margin-right: 20px;
+}
+.li4 {
+  margin-right: 20px;
+}
+.li5 {
+  margin-right: 20px;
+}
+.container-fluid {
+  padding: 0 !important;
+}
+
+/* Game Page */
 
 .stats {
   display: flex;
@@ -27,9 +50,7 @@
 .brd {
   background-color: rgb(75, 62, 62);
   padding-top: 20px;
-
 }
-
 
 .board {
   border: 1rem solid #ff652f;
@@ -44,8 +65,6 @@
   gap: 1rem;
 }
 
-
-
 .squares {
   background: #272727;
   border: none;
@@ -55,19 +74,18 @@
   outline: none;
 }
 #winner {
-  color:darkorange;
-  
+  color: darkorange;
 }
 
-#history{
+#history {
   color: rgb(245, 50, 50);
 }
 
 #gametitle {
   color: chartreuse;
-  font-family: 'Texturina', serif;
+  font-family: "Texturina", serif;
   text-align: center;
-  background-color:darkslategray;
+  background-color: darkslategray;
   margin-bottom: 0;
 }
 
@@ -90,7 +108,7 @@ li {
   list-style: none;
 }
 
-.info-wrapper button {
+.info-wrapper .jmpbtn {
   background: #272727;
   color: white;
   border: none;
@@ -101,81 +119,24 @@ li {
   max-width: 55px;
 }
 
-
-
-/* Top Bar */
-/* 
-#gamelink{
-
-}
-
-ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333333;
-}
-
-li {
-  float: left;
-}
-
-li a{
-  display: block;
-  color:floralwhite;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111111;
-}
-
-#triallink{
-
-}
-
-#aboutlink{
-
-} */
-
-.li1{
-  margin-right: 20px;
-}
-.li2{
-  margin-right: 20px;
-}
-
-.li3{
-  margin-right: 20px;
-}
-
-.container-fluid {
-  padding: 0 !important;
-}
-
-
 /* About page */
 
 .aboutsec {
   margin-top: 10px;
   background-color: darkgray;
-  font-family: 'Yusei Magic', sans-serif;
+  font-family: "Yusei Magic", sans-serif;
   background-color: darkkhaki;
-  color:darkred;
+  color: darkred;
   text-align: center;
 }
 
 #name {
   margin-top: 40px;
-
 }
 
 .about {
   background-color: lightgrey;
-  
+
   /* min-height: 90vh;
   padding: 2rem; */
 }
@@ -183,12 +144,12 @@ li a:hover {
 .game h1 {
   margin: 2rem;
 }
-#dev{
- text-align: center;
- border: 3px solid green;
- padding: 10px;
- font-family: 'Potta One', cursive;
- color:darkslategray;
+#dev {
+  text-align: center;
+  border: 3px solid green;
+  padding: 10px;
+  font-family: "Potta One", cursive;
+  color: darkslategray;
 }
 
 .card-img-top {
@@ -198,7 +159,7 @@ li a:hover {
 .card {
   width: 18rem;
 }
-.firstrow{
+.firstrow {
   width: 100%;
   display: inline;
   margin-left: 0 !important;
@@ -209,8 +170,8 @@ li a:hover {
 }
 .card {
   align-content: center;
-  margin: 0 auto; 
-  float: none; 
+  margin: 0 auto;
+  float: none;
   margin-bottom: 10px;
 }
 
@@ -233,7 +194,6 @@ li a:hover {
   height: 90vh;
 }
 
-
 /* trial page */
 
 .form-control {
@@ -248,99 +208,137 @@ li a:hover {
 }
 
 #txtbtn {
-  
   margin-left: 30px;
   border-radius: 7px;
   font-family: "Roboto", sans-serif;
-  
 }
 
 #entertext {
   color: darkslategrey;
-  font-size:medium;
-  
+  font-size: medium;
 }
 
 #NameInput {
   border: 1px solid red;
   border-radius: 4px;
-  height:30px;
-
+  height: 30px;
 }
 
-#Name{
+#Name {
   margin-top: 20px;
 
   color: darkgreen;
-  font-family: 'Yusei Magic', sans-serif;
-
+  font-family: "Yusei Magic", sans-serif;
 }
 
 /* Form Page */
 
-
-
-.inputField{
+.inputField {
   background: transparent;
   border: none;
   border-bottom: 1px solid #000000;
   -webkit-box-shadow: none;
   box-shadow: none;
   border-radius: 0;
- }
-  
- .inputField:focus{
+}
+
+.inputField:focus {
   outline: red;
- }
-  
- .totalbody{
+}
+
+.totalbody {
   padding-top: 3%;
   padding-bottom: 10%;
   padding-right: 20%;
   padding-left: 20%;
- background-color: rgb(219, 219, 219);
- }
+  background-color: rgb(219, 219, 219);
+}
 
- .bodycontainer h4{
+.bodycontainer h4 {
   padding-bottom: 6px;
- }
-  
- .bodycontainer{
+}
+
+.bodycontainer {
   background-color: white;
   padding-top: 5%;
   padding-bottom: 5%;
- }
-  
- .bodycontainer a{
+}
+
+.bodycontainer a {
   color: rgb(160, 108, 160);
- }
+}
 
- input{
-   width: 100%;
- }
-  
- .bodycontainer p{
+input {
+  width: 100%;
+}
+
+.bodycontainer p {
   padding-bottom: 6px;
- }
+}
 
- #adderr{
-   color: red;
- }
- 
-  
- .divbutt{
+#adderr {
+  color: red;
+}
+
+.divbutt {
   text-align: right;
   margin-right: 25px;
   margin-top: 20px;
- }
-  
- .btndiv{
+}
+
+.btndiv {
   background-color: rgb(0, 60, 128);
   width: 20%;
- }
-  
- .btndiv:hover{
+}
+
+.btndiv:hover {
   background-color: rgb(49, 0, 128);
- }
+}
 
+/* BootComp Page */
 
+#spin {
+  color: aqua;
+}
+.spinclass {
+  background-color: blanchedalmond;
+}
+
+.dropd {
+  background-color: #272727;
+}
+#dropdown-basic {
+  margin-bottom: 30px;
+}
+
+#drophead {
+  color: aliceblue;
+}
+
+.tab {
+  background-color: cadetblue;
+}
+#brd {
+  background-color: #ff652f;
+}
+
+.lst {
+  background-color: lightskyblue;
+}
+
+.boot-floats {
+  background-color: darkseagreen;
+}
+.pb1 {
+  width: 40%;
+}
+
+.pb2 {
+  width: 10%;
+}
+.pb3 {
+  width: 30%;
+}
+.pb4 {
+  width: 20%;
+}

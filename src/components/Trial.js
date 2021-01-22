@@ -15,10 +15,9 @@ const Text = () => {
              <input type="text" className="form-control mb-3" id = "NameInput"></input>
              <button id="txtbtn" className="btn btn-dark" onClick={handleClick}>Click Here !</button>
              <p id="Name">{name}</p>
+                     
              
-             
-             
-         </div>
+            </div>
      );
 };
 
