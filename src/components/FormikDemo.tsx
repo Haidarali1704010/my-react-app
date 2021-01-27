@@ -1,46 +1,57 @@
 import React, { useState } from "react";
 import "../formikDemo.css";
-import MyForm from './MyForm';
+import "../formikDemo.css";
+import MyForm1 from "./MyForm1";
 
-const FormikDemo = () => {
-    const [form,setForm] = useState(false);
-    const Details = [
-        {name:"Haidarali",PhoneNum: 7387364512,Email:"haidrali@gmail.com"},
-        {name:"Sandesh",PhoneNum: 8978765645,Email:"haider@email.com"},  
-        {name:"Harry",PhoneNum: 3456789878,Email:"harry@gmail.com"},
-        {name:"Ben",PhoneNum: 9978674512,Email:"ben@gmail.com"},
-        {name:"Sohil",PhoneNum: 9878765645,Email:"sohil@gmail.com"},
-        {name:"Root",PhoneNum: 8945364512,Email:"root@gmail.com"},
-        ]
+export interface userData {
+    id:number,
+    userName:string,
+    phoneNum:number,
+    email:string
+    
+}
+const detailsList = [
+    {id:1,userName:"Haidarali",phoneNum: 7387364512,email:"haidrali@gmail.com"},
+    {id:2,userName:"Sandesh",phoneNum: 8978765645,email:"sandesh@email.com"},  
+    {id:3,userName:"Harry",phoneNum: 3456789878,email:"harry@gmail.com"},
+    {id:4,userName:"Ben",phoneNum: 9978674512,email:"ben@gmail.com"},
+    {id:5,userName:"Sohil",phoneNum: 9878765645,email:"sohil@gmail.com"},
+    {id:6,userName:"Root",phoneNum: 8945364512,email:"root@gmail.com"},
+    ];
+
+const FormikDemo = ():React.ReactElement => {
+    const [key,setKey] = useState(0);
+
+
+        const ListDetails = detailsList.map((detail:userData) => {
+            return(
+                <div className="listDetails " key={detail.id}>
+                    <p>
+                    <button className="DetailsButton" id = {detail.id.toString()} value={detail.userName}
+                    onClick={(e:any) =>{
+                        const id = Number(e.target.id);
+                        setKey(id);
+                        console.log(key);
+                    
+                    }}>
+                    {detail.userName}
+                    </button>
+                    </p>
+                </div>
+            );
+        });
        
-        
-        const ListDetails = Details.map(item=>{
-        return <div className="listDetails DetailsDisplay" key={item.Email}>
-        <p>
-        <button className="DetailsButton" 
-        //id={item.Email}
-        // value={item.name}
-        onClick={()=>{
-            setForm(true);
-            // <MyForm key={item.Email.toString()}/>
-        }}
-        >{item.name}</button>
-        </p>
-        
-        </div>
-        })
         return(
-            <>
+        
             <div className="displayData">
                 <div>{ListDetails}</div>
-                <div>
-                {form?<MyForm />:null}​​​​​
+                <div className="formikform">
+                <MyForm1 userDetails={detailsList.find((detail:userData) =>detail.id === key)}/>​​​​​
                 </div>
             </div>
-            </>
+            
         
-        )
-
+        );
     
 }
 

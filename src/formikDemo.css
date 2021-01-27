@@ -15,3 +15,21 @@
 .displayData {
   display: flex;
 }
+
+.formikform {
+  padding: 30px;
+  margin-left: 50px;
+  /* background-color: antiquewhite; */
+}
+
+.errpara {
+  color: red;
+}
+
+.fmbtn {
+  margin-top: 30px;
+  border-radius: 4px;
+  background-color: darkred;
+  color: white;
+  padding: 3px;
+}

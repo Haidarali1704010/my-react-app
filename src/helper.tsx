@@ -22,7 +22,7 @@ export const calculateWinner = (
       return squares[a];
     }
   }
-  var j,
+  let j: number,
     count = 0;
   for (j = 0; j < squares.length; j++) {
     if (squares[j] === null) {
