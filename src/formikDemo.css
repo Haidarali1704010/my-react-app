@@ -1,0 +1,17 @@
+.listDetails {
+  color: #fff;
+  width: 80px;
+  margin: 15px auto;
+  height: 30px;
+  background-color: lightcoral;
+  border-radius: 5px;
+}
+
+.DetailsButton {
+  background: transparent;
+  border: transparent;
+}
+
+.displayData {
+  display: flex;
+}
