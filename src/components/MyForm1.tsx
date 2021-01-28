@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useFormik } from "formik";
+import { FormikHelpers, FormikValues, useFormik } from "formik";
 import * as Yup from "yup";
 import "../formikDemo.css";
 import { userData } from "./FormikDemo";
@@ -7,8 +7,9 @@ import { userData } from "./FormikDemo";
 
 interface Propdata {
     userDetails?:userData,
+    handleSubmit: (values: FormikValues) => void;
 }
-const MyForm1 = ({userDetails}:Propdata) => {
+const MyForm1 = ({userDetails,handleSubmit}:Propdata) => {
     const phoneNumReg = /^[0-9]{10}$/;
      const [flag,setFlag] = useState(false);
     const demo = ()=> {
@@ -53,9 +54,15 @@ const MyForm1 = ({userDetails}:Propdata) => {
             .email("Invalid Email Id")
             .required("Email is required")
         }),
-        onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
-          },
+        // onSubmit: values => {
+            
+            
+        //   },
+          onSubmit:(values): void =>
+
+            handleSubmit(values)
+
+           
       });
       useEffect(() => {
           if(userDetails){
@@ -65,6 +72,10 @@ const MyForm1 = ({userDetails}:Propdata) => {
           }
           
       },[userDetails]);
+
+      const handleAdd = () => {
+
+      }
       
       return(
           
@@ -89,6 +100,7 @@ const MyForm1 = ({userDetails}:Propdata) => {
             <p className="errpara">{formik.errors.email}</p>
         
             <button className="fmbtn" type="submit" disabled={!formik.dirty || !formik.isValid}>Submit</button>
+            
 
         </form>
       );

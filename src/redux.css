@@ -1,0 +1,38 @@
+.reduxdemo {
+  display: flex;
+}
+
+.listdiv {
+}
+
+.listButton {
+  margin-left: 5px;
+  padding: 3px;
+  border-radius: 7px;
+  background-color: rgb(165, 132, 42);
+}
+
+.deleteButton {
+  margin-left: 7px;
+  padding: 3px;
+  border-radius: 7px;
+  background-color: rgb(163, 94, 94);
+}
+.submitbtn {
+  padding: 3px;
+  border-radius: 7px;
+}
+
+.buttonsdiv {
+  margin-top: 15px;
+}
+
+.formClass {
+  margin-top: 30px;
+  margin-left: 50px;
+  padding: 30px;
+}
+
+#name {
+  margin-top: 10px;
+}

@@ -1,3 +1,4 @@
+import { FormikValues } from "formik";
 import React, { useState } from "react";
 import "../formikDemo.css";
 import "../formikDemo.css";
@@ -40,13 +41,16 @@ const FormikDemo = ():React.ReactElement => {
                 </div>
             );
         });
-       
+        const handleSubmit = (values: FormikValues): void => {​​
+            
+        
+            };
         return(
         
             <div className="displayData">
                 <div>{ListDetails}</div>
                 <div className="formikform">
-                <MyForm1 userDetails={detailsList.find((detail:userData) =>detail.id === key)}/>​​​​​
+                <MyForm1 handleSubmit={handleSubmit} userDetails={detailsList.find((detail:userData) =>detail.id === key)}/>​​​​​
                 </div>
             </div>
             
