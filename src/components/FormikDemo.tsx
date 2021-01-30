@@ -3,6 +3,10 @@ import React, { useState } from "react";
 import "../formikDemo.css";
 import "../formikDemo.css";
 import MyForm1 from "./MyForm1";
+import {AddUser} from "../Actions/index";
+import store from "../Store";
+import { connect } from "react-redux";
+
 
 export interface userData {
     id:number,
@@ -41,10 +45,13 @@ const FormikDemo = ():React.ReactElement => {
                 </div>
             );
         });
-        const handleSubmit = (values: FormikValues): void => {​​
+        const handleSubmit = (values:FormikValues) => {
+            console.log(values);
+        }
+        // const handleSubmit = (values: FormikValues): void => {​​
             
         
-            };
+        //     };
         return(
         
             <div className="displayData">

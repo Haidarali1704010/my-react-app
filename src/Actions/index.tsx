@@ -15,3 +15,19 @@ export const AddUser = (newItem: ListProp) => {
     payload: newItem,
   };
 };
+
+const Delete_User = "Delete_User";
+export const DeleteUser = (newList: ListProp) => {
+  return {
+    type: Delete_User,
+    payload: newList,
+  };
+};
+
+const User_Click = "User_Click";
+export const UserClick = (User: ListProp) => {
+  return {
+    type: User_Click,
+    payload: User,
+  };
+};

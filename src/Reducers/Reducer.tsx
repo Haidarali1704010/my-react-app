@@ -2,18 +2,11 @@ import { ListProp } from "../components/ReduxDemo";
 
 interface ListData {
   list: ListProp[];
-
-  buttonFlag: boolean;
+  user: any[];
 }
 const initialState: ListData = {
-  list: [
-    {
-      name: "",
-      phone: "",
-      city: "",
-    },
-  ],
-  buttonFlag: false,
+  list: [],
+  user: [],
 };
 const Reducer = (state = initialState, action: any) => {
   switch (action.type) {
@@ -26,6 +19,19 @@ const Reducer = (state = initialState, action: any) => {
       return {
         ...state,
         list: [...state.list, action.payload],
+      };
+    case "User_Click":
+      return {
+        ...state,
+        user: [action.payload],
+      };
+    case "Delete_User":
+      // const newList = state.list.filter(
+      //   (item: any) => item.phone !== action.payload
+      // );
+      return {
+        ...state,
+        list: action.payload,
       };
     default:
       return state;

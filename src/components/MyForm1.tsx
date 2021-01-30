@@ -11,18 +11,18 @@ interface Propdata {
 }
 const MyForm1 = ({userDetails,handleSubmit}:Propdata) => {
     const phoneNumReg = /^[0-9]{10}$/;
-     const [flag,setFlag] = useState(false);
-    const demo = ()=> {
-        if(formik.dirty){
-            if(formik.isValid){
-                setFlag(false);
-            }
-        }
-        else if(!formik.isValid || !formik.dirty){
-            setFlag(true);
-        }
-        setFlag(false);
-    }
+     //const [flag,setFlag] = useState(false);
+    // const demo = ()=> {
+    //     if(formik.dirty){
+    //         if(formik.isValid){
+    //             setFlag(false);
+    //         }
+    //     }
+    //     else if(!formik.isValid || !formik.dirty){
+    //         setFlag(true);
+    //     }
+    //     setFlag(false);
+    // }
     const formik = useFormik({
         initialValues: {
             userName:userDetails?.userName ??"",
@@ -58,9 +58,16 @@ const MyForm1 = ({userDetails,handleSubmit}:Propdata) => {
             
             
         //   },
-          onSubmit:(values): void =>
-
+          onSubmit:(values): void =>{
+            //   const newData = {
+            //       userName:values.userName,
+            //       phoneNum:values.phoneNum,
+            //       email:values.email
+            //   }
             handleSubmit(values)
+          }
+
+           
 
            
       });
