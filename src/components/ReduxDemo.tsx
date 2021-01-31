@@ -1,18 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "../redux.css";
-import store from "../Store";
-import {setFlag} from "../Actions/index";
+// import store from "../Store";
 import {AddUser} from "../Actions/index";
 import {UserClick} from "../Actions/index";
 import {DeleteUser} from "../Actions/index";
-
-
-
-import List from "./List";
-
 import { connect } from "react-redux";
+
 export interface ListProp {
     name:string,
     phone:string ,
@@ -36,6 +31,10 @@ const ReduxDemo = (props:any) => {
                 city
             }
             props.dispatch(UserClick(User));
+            (document.getElementById("name")as any).value=User.name;
+            (document.getElementById("phone")as any).value=User.phone;
+            (document.getElementById("city")as any).value=User.city;
+
             }}>{items.name}</button>
             {/* {buttonFlag ? <button className="deleteButton" onClick={(e) => {
                     e.preventDefault()
@@ -51,7 +50,6 @@ const ReduxDemo = (props:any) => {
         );
     }
          );
-
          const formik = useFormik({
             initialValues: {
                 name:'',
@@ -76,35 +74,43 @@ const ReduxDemo = (props:any) => {
                 .required("City is required")
             }),
             onSubmit: values => {
-                const name =(document.getElementById("name")as any).value;
-                    const phone =(document.getElementById("phone")as any).value;
-                    const city =(document.getElementById("city")as any).value;
-                    const newItem = {
-                        name,
-                        phone,
-                        city
+                console.log(values.phone);
+                console.log(values.name);
+                console.log(values.city);
+
+                    const name =values.name;
+                    const phone =values.phone;
+                    const city =values.city;
+                    
+                    console.log(phone);
+                    let flag = false;
+                    const checkDuplicate = props.list.map((items:any) => {
+                        if(items.phone === values.phone){
+                            flag=true;
+                        }
+                        else{
+                            flag=false;
+                        }
+                    });
+                    console.log(flag);
+                    console.log(checkDuplicate);
+
+                    if(flag){
+                        alert("User with same Phone Number already Exists.")
                     }
-                    let j;
-                    // for(j=0;j<props.list.length;j++){
-                    //     // if(props.list.phone[j]===phone){
-                    //     //     console.log("matched");
-                    //     //     alert("User with same phone number already exists");
-                    //     // }
-                    //     console.log(phone);
-                    //    console.log(props.list.phone[j]);
-                    //     console.log("unmatched");
+                    else{
+                        const newItem = {
+                            name,
+                            phone,
+                            city
+                        }
+                        props.dispatch(AddUser(newItem));
+                        (document.getElementById("name")as any).value="";
+                        (document.getElementById("phone")as any).value="";
+                        (document.getElementById("city")as any).value="";
 
-
-                    // }
-                    props.dispatch(AddUser(newItem));
-                    (document.getElementById("name")as any).value="";
-                    (document.getElementById("phone")as any).value="";
-                    (document.getElementById("city")as any).value="";
-
-
-
-                    console.log(JSON.stringify(values,null,2));
-                // alert(JSON.stringify(values, null, 2));
+                    }
+                    
               },
           });
           useEffect(() => {
@@ -150,7 +156,8 @@ const ReduxDemo = (props:any) => {
                 />
                 <p className="errpara">{formik.errors.city}</p>
 
-                <button className="submitbtn" type="submit">Submit</button>
+                <button className="submitbtn" type="submit" disabled={!formik.dirty || !formik.isValid}
+                >Submit</button>
                 <button className="deleteButton" onClick={(e) => {
                     e.preventDefault()
                     const delUser:string = (document.getElementById("phone")as any).value;
